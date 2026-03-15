@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream:    #F5F2EC;
+  --linen:    #E8E4DC;
+  --black:    #131111;
+  --brown:    #3D2D22;
+  --tan:      #C4A47C;
+  --amber:    #E5A020;
+  --ember:    #C96B38;
+  --sage:     #5A6E52;
+
+  --foreground: #131111;
+  --background: #F5F2EC;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  color: var(--black);
+  background: var(--cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tan);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ember);
+}
+
+/* Selection */
+::selection {
+  background: rgba(229, 160, 32, 0.2);
+  color: var(--black);
+}
+
+/* Glass */
+.glass {
+  background: rgba(245, 242, 236, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(196, 164, 124, 0.2);
+}
+
+.glass-dark {
+  background: rgba(19, 17, 17, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(196, 164, 124, 0.12);
+}
+
+/* Text gradients */
+.text-gradient-amber {
+  background: linear-gradient(135deg, #E5A020, #C96B38);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-tan {
+  background: linear-gradient(135deg, #C4A47C, #E5A020);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Transitions */
+a, button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Underline animation */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Noise texture overlay */
+.texture-noise {
+  position: relative;
+  isolation: isolate;
+}
+
+.texture-noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--ember);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Scrollbar hide */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Font helpers */
+.font-display {
+  font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
+}
+
+/* ─── Marquee ───────────────────────────────────────────────── */
+/* The keyframe is defined in tailwind.config.ts as "marquee-left".
+   Tailwind generates the class `animate-marquee-left`, but we also
+   need a legacy `.animate-marquee` class for MarqueeSection. */
+@keyframes marquee-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee-left 40s linear infinite;
+  will-change: transform;
+}
+
+/* ─── Service card flip ─────────────────────────────────────── */
+.service-card {
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.service-card .card-front {
+  transition: opacity 0.38s ease, transform 0.38s ease;
+}
+
+.service-card .card-back {
+  position: absolute;
+  inset: 0;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.38s ease, transform 0.38s ease;
+}
+
+.service-card:hover .card-front {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.service-card:hover .card-back {
+  opacity: 1;
+  transform: translateY(0);
+}
