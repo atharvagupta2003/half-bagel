@@ -2,6 +2,8 @@
 const nextConfig = {
   output: "export",
   trailingSlash: true,
+  basePath: "/half-bagel",
+  assetPrefix: "/half-bagel",
   images: {
     unoptimized: true,
     remotePatterns: [
