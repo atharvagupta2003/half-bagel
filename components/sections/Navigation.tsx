@@ -44,11 +44,12 @@ export default function Navigation() {
             )}
           >
             {/* Logo */}
-            <a href="#" className="flex items-center gap-2.5 group">
-              <HalfBagelIcon />
-              <span className="font-display text-[1.1rem] font-bold tracking-tight text-black" style={{ letterSpacing: "-0.02em" }}>
-                Half Bagel
-              </span>
+            <a href="#" className="flex items-center group">
+              <img
+                src="/half-bagel/logo-nav.png"
+                alt="Half Bagel"
+                className="h-10 w-auto"
+              />
             </a>
 
             {/* Desktop links */}
@@ -137,27 +138,3 @@ export default function Navigation() {
   );
 }
 
-function HalfBagelIcon() {
-  return (
-    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <radialGradient id="nav-fill" cx="50%" cy="38%" r="52%">
-          <stop offset="0%" stopColor="#D4B48C" />
-          <stop offset="100%" stopColor="#B8946A" />
-        </radialGradient>
-        <clipPath id="top-clip">
-          <rect x="0" y="0" width="30" height="15" />
-        </clipPath>
-      </defs>
-      {/* Full ring clipped to top half only */}
-      <circle cx="15" cy="15" r="13" fill="url(#nav-fill)" clipPath="url(#top-clip)" />
-      <circle cx="15" cy="15" r="6" fill="#F5F2EC" clipPath="url(#top-clip)" />
-      {/* Sesame dots on top half */}
-      <ellipse cx="15" cy="3.5" rx="1.4" ry="2.2" fill="#9B7045" opacity="0.85" />
-      <ellipse cx="23" cy="7" rx="1.4" ry="2.2" fill="#9B7045" opacity="0.85" transform="rotate(35 23 7)" />
-      <ellipse cx="7" cy="7" rx="1.4" ry="2.2" fill="#9B7045" opacity="0.85" transform="rotate(-35 7 7)" />
-      {/* Cut line */}
-      <line x1="2" y1="15" x2="28" y2="15" stroke="#F5F2EC" strokeWidth="1" />
-    </svg>
-  );
-}
