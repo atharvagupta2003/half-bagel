@@ -8,8 +8,8 @@
   --black:    #131111;
   --brown:    #3D2D22;
   --tan:      #C4A47C;
-  --amber:    #E5A020;
-  --ember:    #C96B38;
+  --amber:    #E8220A;
+  --ember:    #B71C0F;
   --sage:     #5A6E52;
 
   --foreground: #131111;
@@ -74,7 +74,7 @@ html.lenis body {
 
 /* Selection */
 ::selection {
-  background: rgba(229, 160, 32, 0.2);
+  background: rgba(232, 34, 10, 0.15);
   color: var(--black);
 }
 
@@ -95,14 +95,14 @@ html.lenis body {
 
 /* Text gradients */
 .text-gradient-amber {
-  background: linear-gradient(135deg, #E5A020, #C96B38);
+  background: linear-gradient(135deg, #E8220A, #B71C0F);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-tan {
-  background: linear-gradient(135deg, #C4A47C, #E5A020);
+  background: linear-gradient(135deg, #C4A47C, #E8220A);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

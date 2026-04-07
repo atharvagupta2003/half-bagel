@@ -15,8 +15,8 @@ const config: Config = {
         black:  "#131111",
         brown:  "#3D2D22",
         tan:    "#C4A47C",
-        amber:  "#E5A020",
-        ember:  "#C96B38",
+        amber:  "#E8220A",
+        ember:  "#B71C0F",
         sage:   "#5A6E52",
       },
       fontFamily: {
@@ -72,8 +72,8 @@ const config: Config = {
         "5xl": "2.5rem",
       },
       boxShadow: {
-        warm:     "0 4px 24px -2px rgba(201, 107, 56, 0.15), 0 2px 8px -1px rgba(201, 107, 56, 0.1)",
-        "warm-lg":"0 12px 48px -4px rgba(201, 107, 56, 0.2), 0 4px 16px -2px rgba(201, 107, 56, 0.15)",
+        warm:     "0 4px 24px -2px rgba(232, 34, 10, 0.18), 0 2px 8px -1px rgba(232, 34, 10, 0.12)",
+        "warm-lg":"0 12px 48px -4px rgba(232, 34, 10, 0.25), 0 4px 16px -2px rgba(232, 34, 10, 0.18)",
         tan:      "0 4px 24px -2px rgba(196, 164, 124, 0.2), 0 2px 8px -1px rgba(196, 164, 124, 0.12)",
         glass:    "0 8px 32px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.4)",
         deep:     "0 24px 80px -12px rgba(0,0,0,0.22)",

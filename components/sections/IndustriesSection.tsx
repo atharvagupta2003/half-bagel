@@ -62,7 +62,7 @@ export default function IndustriesSection() {
               Who we work with.
             </h2>
             <p className="text-black/45 text-sm leading-relaxed max-w-xs">
-              We specialise in categories where brand is not just a differentiator —
+              We specialise in categories where brand is not just a differentiator,
               it&apos;s the entire game.
             </p>
           </div>

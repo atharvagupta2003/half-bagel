@@ -4,7 +4,6 @@ const ITEMS = [
   "Brand Strategy",
   "Creative Direction",
   "Growth Marketing",
-  "Sales Alignment",
   "Campaign Development",
   "Content Strategy",
   "Brand Identity",

@@ -36,7 +36,7 @@ export default function IntroAnimation({ onComplete }: IntroAnimationProps) {
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 2.0, ease: [0.16, 1, 0.3, 1] }}
-            className="w-[504px] max-w-[85vw]"
+            className="w-[620px] max-w-[88vw]"
             style={{ marginBottom: "10vh" }}
           />
         </motion.div>

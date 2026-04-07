@@ -18,7 +18,7 @@ const PILLARS = [
   {
     number: "03",
     title:  "Revenue Alignment",
-    body:   "Great branding drives growth. We connect brand strategy directly to sales infrastructure, partnerships, and measurable commercial outcomes.",
+    body:   "Strong branding supports broader business objectives. We align brand strategy with sales infrastructure, partnerships, and measurable commercial outcomes.",
     accent: "#C96B38",
   },
 ];

@@ -62,20 +62,6 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 pt-28 pb-16 text-center">
         <motion.div style={{ y: springY, opacity: headOpacity }} className="max-w-5xl mx-auto w-full">
 
-          {/* Overline label */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={loaded ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="flex items-center justify-center gap-3 mb-8"
-          >
-            <span className="block w-6 h-px bg-tan" />
-            <span className="text-[0.68rem] font-semibold tracking-[0.22em] text-tan uppercase">
-              Embedded Brand Partner
-            </span>
-            <span className="block w-6 h-px bg-tan" />
-          </motion.div>
-
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 44 }}
